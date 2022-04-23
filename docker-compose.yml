@@ -1,0 +1,12 @@
+version: '2.2'
+
+
+services:
+  proxy:
+    image: nginx:latest
+    ports:
+      - 7777:7777
+    restart: always
+    volumes:
+      - ./proxy/conf/:/etc/nginx/conf.d/:ro
+
